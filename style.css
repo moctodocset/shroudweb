@@ -3,26 +3,34 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
+/* header */
+
+header {
+    background-image: url("images/mountainback.jpg");
+    background-size: 100%;
+    background-position: center;
+}
+
+header .logo a {
+    background-color: darkslateblue;
+    background-image: url("images/shround.png");
+    background-size: 100%;
+    display: inline-block;
+    height: 160px;
+    width: 130px;
+    border-radius: 10px;
+    text-indent: 9999999999px;
+    box-shadow: black 0px 0px 15px;
+}
 
 footer,header {
     background-color: darkslateblue;
     padding: 10px 10px;
 }
 
-header {
-    background-image: url("images/mountainback.jpg");
-    background-size: 100%;
-    background-position: center;
-    top: -100px;
-}
-
-section {
-    padding: 35px;
-    display: flex;
-    flex-direction: row;
-}
 
 nav ul {
     margin: 0;
@@ -35,9 +43,27 @@ li {
     margin-right: 20px;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* main body */
+
+/* upper */
+
+section {
+    padding: 35px;
+    display: flex;
+    flex-direction: row;
+}
+
 h1, h2 {
-    font-size: 50px;
     color: darkslateblue;
+    font-size: 50px;
 }
 
 h2 {
@@ -45,35 +71,20 @@ h2 {
     font-size: 35px;
 }
 
-a {
-    text-decoration: none;
-}
-
-p {
-    text-align: left;
-    font-size: 25px;
-}
-
-footer {
-    padding: 0;
-    font-size: 20px;
-}
-
-div.mixer p {
-    text-align: center;
-}
-
-section.footer {
-    padding: 15px;
-    justify-content: space-between;
-}
-
-footer img {
-    display: block;
+section.triple div {
+    background: lightsteelblue;
     margin: auto;
-    width: 100px;
-    height: 100px;
+    width: 444px;
+    height: 250px;
+    border-radius: 10px;
+    border: 6px solid darkslateblue;
 }
+
+section.triple div:hover {
+    border-color: lightsteelblue;
+}
+
+/* lower */
 
 section.lower {
     background-color: darkslateblue;
@@ -99,36 +110,81 @@ section.lower h3 {
     font-size: 24px;
 }
 
-header .logo a {
-    background-color: darkslateblue;
-    background-image: url("images/shround.png");
-    background-size: 100%;
-    display: inline-block;
-    height: 160px;
-    width: 130px;
-    border-radius: 10px;
-    text-indent: 9999999999px;
-    box-shadow: black 0px 0px 15px;
+/* footer */
+
+p {
+    text-align: left;
+    font-size: 25px;
 }
 
-section.triple div {
-    background: lightsteelblue;
+div.mixer p {
+    text-align: center;
+}
+
+section.footer {
+    font-size: 20px;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+footer img {
+    display: block;
     margin: auto;
-    width: 444px;
-    height: 250px;
-    border-radius: 10px;
-    border: 6px solid darkslateblue;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-section.triple div:hover {
-    border: 6px solid lightsteelblue;
+    width: 100px;
+    height: 100px;
 }
 
 div.mixer img:hover {
     width: 120px;
     height: 120px;
 }
+
+/* media queries */
+
+/* small break */
+@media screen and (max-width: 1450px) {
+    nav ul {
+        margin: 0;
+        padding-left: 90%;
+        list-style-type: square;
+    }
+    
+    li {
+        display: list-item;
+        margin-right: 20px;
+    }
+
+    section.triple div {
+        background: lightsteelblue;
+        margin: auto;
+        width: 300px;
+        height: 167px;
+        border-radius: 4px;
+        border: 4px solid darkslateblue;
+    }
+}
+
+/* major break */
+@media screen and (max-width: 1150px) {
+
+    header {
+        background-size: auto;
+        background-position-y: -1000px;
+    }
+
+    section.triple {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.triple div {
+        margin: 50px;
+    }
+
+    section.lower {
+        background-size: auto;
+        height: 700px ;
+    }
+}
+
+/* end */
