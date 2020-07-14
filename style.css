@@ -172,6 +172,10 @@ div.mixer img:hover {
         background-position-y: -1000px;
     }
 
+    header h1 {
+        color: white;
+    }
+
     section.triple {
         flex-direction: column;
         align-items: center;
@@ -183,7 +187,16 @@ div.mixer img:hover {
 
     section.lower {
         background-size: auto;
-        height: 700px ;
+        height: 750px;
+    }
+    
+    section.lower h2{
+        margin-left: 100;
+        font-size: 35;
+    }
+    section.lower h3{
+        margin-top: 75;
+        font-size: 18;
     }
 }
 
