@@ -145,7 +145,7 @@ div.mixer img:hover {
 @media screen and (max-width: 1450px) {
     nav ul {
         margin: 0;
-        padding-left: 90%;
+        padding-left: 80%;
         list-style-type: square;
     }
     
@@ -187,16 +187,15 @@ div.mixer img:hover {
 
     section.lower {
         background-size: auto;
-        height: 800px;
     }
     
     section.lower h2{
-        margin-left: 100;
-        font-size: 35;
+        margin-left: 65px;
+        font-size: 35px;
     }
     section.lower h3{
-        margin-top: 75;
-        font-size: 18;
+        margin-top: 50px;
+        font-size: 18px;
     }
 }
 
